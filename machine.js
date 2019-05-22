@@ -28,7 +28,7 @@ class Machine {
         symbols.push("o");
       }
     }
-    console.log(symbols).join("-");
+    console.log("-- " + symbols.join("-") + " --");
   }
   run(str) {
     var i;
@@ -106,5 +106,14 @@ let funcs = [reverse, invert, addChar, removeLast, order];
 let mac = new Machine();
 mac.add(funcs[0]);
 mac.add(funcs[1]);
+mac.add(funcs[4]);
+mac.add(funcs[3]);
+mac.add(funcs[2]);
+mac.add(funcs[1]);
+mac.add(funcs[0]);
+mac.remove(0,1);
 mac.print();
-mac.run("100");
+mac.run("10010");
+mac.reset();
+//mac.run("10110");
+mac.print();
