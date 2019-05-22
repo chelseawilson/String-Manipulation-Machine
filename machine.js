@@ -115,5 +115,5 @@ mac.remove(0,1);
 mac.print();
 mac.run("10010");
 mac.reset();
-//mac.run("10110");
+
 mac.print();
