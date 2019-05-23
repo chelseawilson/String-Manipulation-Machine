@@ -126,7 +126,6 @@ let mac = new Machine();
 let funcs = {v:reverse, i:invert, a:addChar, l:removeLast, o:order};
 let current = '';
 let rem1 = -1;
-var rem2;
 
 //tells the user possible inputs and runs different methods of the machine
 //according to the inputs
@@ -171,9 +170,7 @@ rl.on('line', function (line) {
         rem1 = parseInt(line, 10);
         console.log('enter the index at which to stop removing');
       } else {
-        //take away rem2 later
-        rem2 = parseInt(line, 10);
-        mac.remove(rem1, rem2);
+        mac.remove(rem1, parseInt(line, 10));
         current = '';
         rem1 = -1
         console.log("add, remove, reset, print, run, or exit");
